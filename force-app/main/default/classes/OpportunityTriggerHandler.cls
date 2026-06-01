@@ -1,4 +1,5 @@
 public with sharing class OpportunityTriggerHandler {
+    /* Create follow - up tasks . */
     public static void createFollowUpTasks(List<Opportunity> opportunities) {
         List<Task> tasks = new List<Task>();
 
