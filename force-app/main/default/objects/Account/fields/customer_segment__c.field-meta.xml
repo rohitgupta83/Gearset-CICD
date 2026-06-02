@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>customer_segment__c</fullName>
-    <label>customer segment</label>
+    <description>Categorises the account by business size segment (Enterprise, Large, MSME, Medium, Small). Note: field API name uses snake_case for legacy compatibility.</description>
+    <label>Customer Segment</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
