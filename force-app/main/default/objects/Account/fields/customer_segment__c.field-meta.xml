@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>customer_segment__c</fullName>
+    <label>customer segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>medium</fullName>
+                <default>false</default>
+                <label>medium</label>
+            </value>
+            <value>
+                <fullName>MSME</fullName>
+                <default>false</default>
+                <label>MSME</label>
+            </value>
+            <value>
+                <fullName>Large</fullName>
+                <default>false</default>
+                <label>Large</label>
+            </value>
+            <value>
+                <fullName>small</fullName>
+                <default>false</default>
+                <label>small</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
