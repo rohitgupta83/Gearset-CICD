@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Top 5 Accounts by Revenue" icon-name="standard:account">
+        <template if:true={isLoading}>
+            <div class="slds-is-relative slds-p-around_medium">
+                <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={hasError}>
+            <div class="slds-p-around_medium">
+                <lightning-formatted-text value={error} class="slds-text-color_error"></lightning-formatted-text>
+            </div>
+        </template>
+
+        <template if:true={hasAccounts}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}
+                hide-checkbox-column
+                class="slds-p-horizontal_small"
+            ></lightning-datatable>
+        </template>
+
+        <template if:false={hasAccounts}>
+            <template if:false={isLoading}>
+                <template if:false={hasError}>
+                    <div class="slds-p-around_medium slds-text-align_center">
+                        <p>No accounts with revenue data found.</p>
+                    </div>
+                </template>
+            </template>
+        </template>
+    </lightning-card>
+</template>
