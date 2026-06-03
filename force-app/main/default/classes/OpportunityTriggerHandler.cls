@@ -3,7 +3,11 @@
  *              Processes trigger events and performs DML operations.
  */
 public with sharing class OpportunityTriggerHandler {
-    /**
+/**
+ * @description Handler class for Opportunity trigger logic.
+ *              Processes trigger events and performs DML operations.
+ */
+/**
      * @description Creates follow-up tasks for each opportunity in the provided list.
      * @param opportunities List of Opportunity records to process.
      */
