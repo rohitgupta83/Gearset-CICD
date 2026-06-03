@@ -7,6 +7,7 @@ public with sharing class OpportunityTriggerHandler {
      * @description Creates follow-up tasks for each opportunity in the provided list.
      * @param opportunities List of Opportunity records to process.
      */
+    /* Create follow - up tasks . */
     public static void createFollowUpTasks(List<Opportunity> opportunities) {
         List<Task> tasks = new List<Task>();
 
