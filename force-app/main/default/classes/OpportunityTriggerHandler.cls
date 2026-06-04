@@ -1,6 +1,10 @@
 public with sharing class OpportunityTriggerHandler {
 
+
     private static Boolean hasRun = false;
+
+
+    /* Create follow - up tasks . */
 
     public static void createFollowUpTasks(List<Opportunity> opportunities) {
         if (opportunities == null || opportunities.isEmpty() || hasRun) return;
