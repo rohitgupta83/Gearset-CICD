@@ -4,3 +4,4 @@
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>
+// This is a standard list view for the HP10__c object, showing all records without any filters.
