@@ -19,16 +19,20 @@ export default class TopRevenueAccounts extends NavigationMixin(LightningElement
     @wire(getTopRevenueAccounts)
     wiredAccounts({ data, error }) {
         this.isLoading = false;
-        if (data) {
-            this.accounts = data.map(acc => ({
-                ...acc,
-                accountUrl: `/lightning/r/Account/${acc.Id}/view`
-            }));
-            this.error = undefined;
-        } else if (error) {
-            this.error = error.body?.message || 'Unknown error fetching accounts.';
-            this.accounts = [];
-        }
+        data ? this.handleAccountsData(data) : this.handleAccountsError(error);
+    }
+
+    handleAccountsData(data) {
+        this.accounts = data.map(acc => ({
+            ...acc,
+            accountUrl: `/lightning/r/Account/${acc.Id}/view`
+        }));
+        this.error = undefined;
+    }
+
+    handleAccountsError(error) {
+        this.error = error?.body?.message || 'Unknown error fetching accounts.';
+        this.accounts = [];
     }
 
     get hasAccounts() {
